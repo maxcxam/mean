@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookStore</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="styles.60875ac85a6d4da7c0e9.css"></head>
+<body>
+  <app-root></app-root>
+
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+
+  <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+  </script>
+
+  <script>
+    function ready(fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(fn);
+
+    function fn() {
+      $('body').on('focus', 'input.form-control', (e) => {
+        $(e.target).next('label').addClass('active');
+        //console.log('Элемент foo получил фокус.');
+      });
+
+      $('body').on('blur', 'input.form-control', (e) => {
+        if (!$(e.target).val()) {
+          $(e.target).next('label').removeClass('active');
+          //console.log('Элемент foo потерял фокус.');
+        }
+      });
+    }
+  </script>
+
+<script src="runtime-es2015.977fa7ffa647655d97b7.js" type="module"></script><script src="polyfills-es2015.551225243b1eb435bb30.js" type="module"></script><script src="runtime-es5.d6f0dd71b60f8a29e6a8.js" nomodule></script><script src="polyfills-es5.fdab6b769da451ba6a00.js" nomodule></script><script src="scripts.8ec01b9b55c52582c60f.js"></script><script src="main-es2015.b3a6f929cd3189e1119e.js" type="module"></script><script src="main-es5.e4efb2dc56486da7e632.js" nomodule></script></body>
+</html>

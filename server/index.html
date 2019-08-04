@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookStore</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <h1>WORK!!!</h1>
+  <app-root></app-root>
+
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+
+  <script type="text/javascript">
+      // Animations initialization
+      new WOW().init();
+  </script>
+
+  <script>
+    function ready(fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(fn);
+
+    function fn() {
+      $('body').on('focus', 'input.form-control', (e) => {
+        $(e.target).next('label').addClass('active');
+        //console.log('Элемент foo получил фокус.');
+      });
+
+      $('body').on('blur', 'input.form-control', (e) => {
+        if (!$(e.target).val()) {
+          $(e.target).next('label').removeClass('active');
+          //console.log('Элемент foo потерял фокус.');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
